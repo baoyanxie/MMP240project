@@ -1,0 +1,208 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+-moz-box-sizing: border-box; 
+-webkit-box-sizing: border-box; 
+box-sizing: border-box;
+}
+img,video{width: auto; max-width: 100%; height: auto; margin: 0 auto 1em;
+}
+
+body{
+	width:100%;
+	margin:0 auto;
+	line-height:1.5;
+	font-family:Arial, Helvetica, sans-serif;
+	background-color:#CCC;
+}
+/* make images and video elements responsive */
+img,video{width: auto; max-width: 100%; height: auto; margin: 0 auto 1em;}
+
+header{
+	margin-bottom:5em;
+	background-color:#2F63CF;
+}
+.track{
+	width:96%;
+	/* margin:0 auto; */
+	margin-left:auto;
+	margin-right:auto;
+	padding:4% 4%;
+	background-color:#FFF;
+	padding-bottom:2em;
+}
+h1,h2{
+	font-weight:bold;
+	line-height:1em;
+	color:#03C;
+	font-size:1.5em;
+}
+
+header h1{
+	margin-bottom:2em;
+}
+
+h3{
+	font-weight:bold;
+}
+p{
+	font-size:0.9em;
+	margin-top:0.8em;
+}
+
+strong{
+	font-weight:900;
+}
+
+
+
+/* 
+Directions Page
+*/
+.directions{
+	background-color:white;
+}
+.directions strong{
+	text-transform: uppercase;
+}
+
+
+
+footer{
+	text-align:center;
+	font-size:0.7em;
+	color:#fff;
+	margin-top:-8px;
+	background-color:#06F;
+	padding-top:1em;
+}
+.top a{
+  padding:0.5em 0.625em; /*10/16 */
+  background-color:#FF9840;
+  border-radius:5px;
+  color: #fff;
+  text-decoration:none;
+}
+.top{
+	margin-top:1em;
+	margin-bottom:-0.65em;
+}
+.container{
+	margin-top:1em;
+}
+
+
+
+
+/* ----------------------------------
+google map
+----------------------------------- */
+.google-map{
+	
+ position: relative;
+    padding-bottom: 105.263157894737%; 
+    height: 0;
+}
+.google-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	margin-top:1em;
+}
+
+/* ---------------------------------
+Navigation Styles
+----------------------------------- */
+
+
+#main_nav{
+  clear:both;
+}  
+
+#main_nav ul{
+  list-style: none;
+}
+
+#main_nav li a{
+  display:block;
+  color:#fff;
+  background-color:#FF9840;
+  text-transform: uppercase;
+  padding: 0.625em; /* 10/16 */
+  text-decoration:none;
+  border-bottom: 1px solid;
+  font-weight:800;
+}
+
+#main_nav li a:hover{
+  color:#FF9840;
+  background-color: #fff;
+}
+  
+/* menu button */
+.menu a{
+  padding:0.5em 0.625em; /*10/16 */
+  background-color:#FF9840;
+  border-radius:3px;
+  color: #fff;
+  text-decoration:none;
+}
+
+.menu a:hover{
+  color:#555;
+  background-color:#FF9840;
+}
+ 
+.menu{
+  /*margin-top:-8em;*/
+}
+
+/* ==========================
+*  Media Queries for Main Nav
+*  ========================== */
+/* these don't have to be separate. We did so for two reasons:
+1. Easy to copy and paste this into new design
+2. Depending on your site you may need separate break points for the nav. You may want to see what width is needed to fit your nav horizontally without breaking and use that as the breakpoint. 
+
+It should also be noted that there is only one media query because this CSS moves the nav to the top where it can stay for all of the other sizes.
+*/
+
+/* 656 / 16 */
+@media only screen and (min-width:42.75em) {
+	/* hide the menu button */
+  .menu{
+	  display:none;
+  }
+  
+/* move main_nav to top of the screen */
+  #main_nav{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+   overflow:hidden;
+    background-color:#FF9840;
+  }
+  
+  #main_nav li{
+    display:inline;
+    line-height:1em;
+  }
+  #main_nav li a{
+    float:left;
+    padding: 0.9375em; /* 10/16  and  15/16 */
+    border-bottom: none;
+  }
+  
+/* hide the link to top in the nav */
+  #main_nav li a.top{
+    display: none;
+  }
+  /* move the rest of the page down accordingly */
+  .container{
+   margin-top:3.75em;  /*60 / 16 */ 
+  }
