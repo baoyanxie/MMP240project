@@ -1,0 +1,150 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+-moz-box-sizing: border-box; 
+-webkit-box-sizing: border-box; 
+box-sizing: border-box;
+}
+
+/* make images and video elements responsive */
+img,video{width: auto; max-width: 100%; height: auto; margin: 0 auto 1em;}
+
+body{
+	width:100%;
+	margin:0 auto;
+	line-height:1.5;
+	font-family:Arial, Helvetica, sans-serif;
+	background-image:url(../images/00.jpg);
+}
+p{
+	font-size:0.9em;
+	padding-top:0.5em;
+}
+header h1{
+	text-align:center;
+	font-weight:bold;
+	padding-top:1em;
+	font-size:2.5em;
+	color:#fff;
+	line-height:1.2em;
+	font-family:'Abril Fatface'; 
+}
+
+
+/* ------------------------
+body styles
+--------------------------*/
+h1{
+	font-weight:900;
+	padding-bottom:0.3em;
+	color:#f63;
+	font-size:1em;
+}
+span{
+	font-size:0.9em;
+	color:#309;
+}
+.video{
+	width:95%;
+	/* margin:0 auto; */
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:20px;
+	padding:3% 3%;
+	background-color:#FFF;
+	opacity:0.8;
+	border-radius:6px; 
+}
+.videoWrapper{
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px; 
+    height: 0;
+}
+.videoWrapper iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*-------------------------
+footer styles
+-------------------------*/
+footer{
+	text-align:center;
+	font-size:0.8em;
+	color:#fff;
+	margin-bottom:0.8em;
+}
+#bmcc{
+	font-size:2.2em;
+	font-weight:bold;
+	margin-top:0.5em;
+	font-family:'Abril Fatface'; 
+}
+#address{
+	font-size: 1.2em;
+	font-weight:bold;
+	margin-top:-0.5em;
+	margin-bottom:1em;
+}
+
+
+/* ---------------------------------
+Navigation Styles
+----------------------------------- */
+#main_nav{
+  clear:both;
+}  
+
+#main_nav ul{
+  list-style: none;
+}
+
+#main_nav li a{
+  display:block;
+  color:#FFF;
+  background-color:#F99;
+  text-transform: uppercase;
+  padding: 0.4em; /* 10/16 */
+  text-decoration:none;
+  border-bottom:1px solid;
+  font-weight:800; 
+}
+
+#main_nav li a:hover{
+  color:#ff9840;
+  background-color: #fff;
+}
+  
+/* menu button */
+.menu a{
+  padding:0.5em 0.625em; /*10/16 */
+  background-color:#F99;
+  color:#fff;
+  text-decoration:none;
+  font-weight:800;
+}
+#menu-button{
+	margin-bottom:1.5em;
+	margin-top:1em;
+}
+.top a{
+  padding:0.5em 0.625em; /*10/16 */
+  background-color:#F99;
+  color:#fff;
+  text-decoration:none;
+  font-weight:800;
+}
+.top{
+	margin-top:3em;
+	margin-bottom:-0.75em;
+}
+.container{
+	margin-top:1em;
+}
